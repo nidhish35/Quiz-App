@@ -1,86 +1,122 @@
-*{
-    margin: 0px;
-    padding: 0px;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
-body{
+body {
     background-color: lightblue;
-}
-
-.container{
-    width: 70vh;
-    height: 50vh;
-    background-color: white;
-    margin: 15vh auto;
-    border-radius: 10px;
-}
-
-.container  h1{
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     padding: 10px;
+}
+
+.container {
+    width: 90%;
+    max-width: 400px;
+    background-color: white;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.container h1 {
+    text-align: center;
+    padding: 15px;
     background-color: #333;
     color: white;
-    border-radius: 10px;
+    border-radius: 10px 10px 0 0;
+    font-size: 1.5rem;
 }
 
-.quiz h2{
-    font-size: 20px;
+.quiz h2 {
+    font-size: 18px;
     background-color: bisque;
-    padding: 10px;
+    padding: 12px;
+    text-align: center;
 }
 
-#answer-btn{
+#answer-btn {
     display: block;
     width: 100%;
-    padding: 10px;
-    margin: 10px 0px;
-    
+    padding: 12px;
+    margin: 10px 0;
     border: none;
     border-radius: 5px;
-    
+    font-size: 16px;
 }
 
-.btn{
+.btn {
     display: block;
     width: 100%;
-    padding: 10px;
-    margin: 20px 0px;
+    padding: 12px;
+    margin: 15px 0;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
 }
 
-.btn:hover:not([disabled]){
+.btn:hover:not([disabled]) {
     background-color: #333;
     color: white;
 }
 
-.btn:disabled{
-    cursor: not-drop;
+.btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
 }
-#next-btn{
+
+#next-btn {
     display: block;
-    padding: 10px;
-    width: 100px;
-    margin: 2px auto 0;
+    padding: 12px;
+    width: 120px;
+    margin: 10px auto 0;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     display: none;
+    font-size: 16px;
 }
-#next-btn:hover{
+
+#next-btn:hover {
     background-color: #333;
     color: white;
 }
 
-.correct{
+.correct {
     background-color: green;
     color: white;
 }
 
-.incorrect{
+.incorrect {
     background-color: red;
     color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        max-width: 350px;
+    }
+
+    .container h1 {
+        font-size: 1.3rem;
+        padding: 12px;
+    }
+
+    .quiz h2 {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .btn, #next-btn {
+        font-size: 14px;
+        padding: 10px;
+    }
 }
